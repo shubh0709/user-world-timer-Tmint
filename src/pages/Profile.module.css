@@ -22,6 +22,10 @@
   justify-content: space-between;
 }
 
+.timer {
+  background-color: lightcoral;
+}
+
 .userDetailsSection {
   width: 90%;
   background-color: aqua;
@@ -88,6 +92,8 @@
 
 @media (max-width: 450px) {
   .timerHandle {
+    width: 50%;
     flex-direction: column;
+    align-self: flex-end;
   }
 }

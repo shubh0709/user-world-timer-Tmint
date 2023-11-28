@@ -116,7 +116,7 @@ function ProfilePage() {
                 return <option key={val}>{val}</option>;
               })}
           </select>
-          <div>{formatTime()}</div>
+          <div className={styles.timer}>{formatTime()}</div>
           <button onClick={ChangeTimerStatus}>{"start/stop"}</button>
         </div>
       </div>
