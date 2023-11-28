@@ -55,7 +55,7 @@ export async function fetchPosts() {
 
 export async function fetchCountries() {
   try {
-    const data = await fetch("http://worldtimeapi.org/api/timezone");
+    const data = await fetch("https://worldtimeapi.org/api/timezone");
     const jsonData: string[] = await data.json();
 
     return ["None", ...jsonData];
@@ -68,9 +68,9 @@ export async function fetchTime(area: string) {
   try {
     const region = area.split("/");
     const data = await fetch(
-      `http://worldtimeapi.org/api/timezone/${region[0]}/${region?.[1] ?? ""}/${
-        region?.[2] ?? ""
-      }`
+      `https://worldtimeapi.org/api/timezone/${region[0]}/${
+        region?.[1] ?? ""
+      }/${region?.[2] ?? ""}`
     );
     const jsonData = await data.json();
 
