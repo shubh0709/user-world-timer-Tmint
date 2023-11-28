@@ -24,10 +24,11 @@ function findUserIdData(
 
 export async function fetchPosts() {
   try {
-    const postData = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const [postData, userData] = await Promise.all([
+      fetch("https://jsonplaceholder.typicode.com/posts"),
+      fetch("https://jsonplaceholder.typicode.com/users"),
+    ]);
     const postJsonData: PostsData[] = await postData.json();
-
-    const userData = await fetch("https://jsonplaceholder.typicode.com/users");
     const userJsonData: UserData[] = await userData.json();
 
     let transformedData: TransformedPostsData = {};
@@ -60,7 +61,7 @@ export async function fetchCountries() {
 
     return ["None", ...jsonData];
   } catch {
-    return [];
+    return ["None"];
   }
 }
 
@@ -76,6 +77,6 @@ export async function fetchTime(area: string) {
 
     return jsonData.utc_offset;
   } catch {
-    return new Date();
+    return "+0:00";
   }
 }
