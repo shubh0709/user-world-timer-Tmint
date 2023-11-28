@@ -1,0 +1,87 @@
+.pageSetup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileHeader {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  /* background-color: brown; */
+  justify-content: space-between;
+}
+
+.timerHandle {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  /* background-color: brown; */
+  justify-content: space-between;
+}
+
+.userDetailsSection {
+  width: 90%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.postContentContainer {
+  width: 90%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.postContent {
+  max-width: 25%;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.headings {
+  color: greenyellow;
+}
+
+@media (max-width: 850px) {
+  .timerHandle {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .postContent {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 550px) {
+  .postContent {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .timerHandle {
+    flex-direction: column;
+  }
+}
