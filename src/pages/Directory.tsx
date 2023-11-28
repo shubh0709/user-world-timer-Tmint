@@ -31,7 +31,6 @@ function Directory() {
   return (
     <div className={styles.pageSetup}>
       <h2> Directory</h2>
-      {/* <div className={styles.postContainer}> */}
       {posts &&
         Object.entries(posts).length > 0 &&
         Object.keys(posts).map((userId) => {
@@ -47,7 +46,6 @@ function Directory() {
           );
         })}
     </div>
-    // </div>
   );
 }
 

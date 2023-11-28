@@ -6,22 +6,21 @@
   align-items: center;
 }
 
-.postContainer {
-  width: 100%;
-  background-color: aqua;
-  display: flex;
-  justify-content: center;
-}
-
 .userInfoCard {
   width: 90%;
   background-color: aqua;
   display: flex;
-  flex-direction: "row";
+  flex-direction: row;
   justify-content: space-between;
   border: 1px solid black;
   border-radius: 0.5rem;
   margin: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (max-width: 550px) {
+  .userInfoCard {
+    width: 80%;
+  }
 }
